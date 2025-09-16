@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "14016118-1171-4be9-a295-b67f0d92290d",
-		"name": "02_AuthNovo",
+		"_postman_id": "08720a03-45b8-4592-93ed-b41470faa211",
+		"name": "02_Auth",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "33404419",
-		"_collection_link": "https://uelerbernardo.postman.co/workspace/Academy~80338876-9408-4e88-8445-cb0b4abaab24/collection/33404419-14016118-1171-4be9-a295-b67f0d92290d?action=share&source=collection_link&creator=33404419"
+		"_collection_link": "https://uelerbernardo.postman.co/workspace/Academy~80338876-9408-4e88-8445-cb0b4abaab24/collection/33404419-08720a03-45b8-4592-93ed-b41470faa211?action=share&source=collection_link&creator=33404419"
 	},
 	"item": [
 		{
@@ -504,6 +504,92 @@
 					"response": []
 				},
 				{
+					"name": "User_Status",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status Code is 200\", function( ) {\r",
+									"    pm.response.to.have.status(200);\r",
+									"})//teste para validar se o starus retornado no Json foi 200\r",
+									"\r",
+									"pm.globals.set\r",
+									"\r",
+									"pm.test(\"Validate Status msg is True\", function(){\r",
+									"    pm.expect(pm.response.json().msg).to.eql(pm.globals.get(\"MsgStatus\"))\r",
+									"})\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "{{TokenUser}}",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/status/{{UserId}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"status",
+								"{{UserId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "User_Update",
 					"event": [
 						{
@@ -720,6 +806,64 @@
 							"path": [
 								"user",
 								"password",
+								"{{UserId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User_Delete",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function() {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Validate Delete Msg\", function(){\r",
+									"    pm.expect(pm.response.json().msg).to.eql(pm.globals.get(\"\"))\r",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{TokenUser}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{Token}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{url}}/user/{{UserId}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
 								"{{UserId}}"
 							]
 						}
