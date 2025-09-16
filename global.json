@@ -1,0 +1,63 @@
+{
+	"id": "601b8858-6ceb-441a-8b5b-73cddae43a3c",
+	"values": [
+		{
+			"key": "MailAdmin",
+			"value": "sysadmin@qacoders.com",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "Password",
+			"value": "1234@Test",
+			"type": "secret",
+			"enabled": true
+		},
+		{
+			"key": "MsgMailRequired",
+			"value": "O campo e-mail é obrigatório.",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "MsgPasswordRequired",
+			"value": "O campo senha é obrigatório.",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "MsgInvalidData",
+			"value": "E-mail ou senha informados são inválidos.",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "MsgStatus",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "MsgPasswordUpdate",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "MsgUserDelete",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		}
+	],
+	"name": "Globals",
+	"_postman_variable_scope": "globals",
+	"_postman_exported_at": "2025-09-11T18:48:04.772Z",
+	"_postman_exported_using": "Postman/11.62.6"
+}

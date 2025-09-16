@@ -1,0 +1,99 @@
+{
+	"id": "2485cacb-838f-4b72-8002-89705d90846b",
+	"name": "postman",
+	"values": [
+		{
+			"key": "url",
+			"value": "https://api-automacao.qacoders.dev.br/api",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "Token",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "Count1",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "FirstName",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "LastName",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "FullName",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "ProviderMail",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "Email",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "CPF",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "Count2",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "UserId",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "TokenUser",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "FullNameUpdate",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "MailUpdate",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "PasswordUpdate",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2025-09-11T18:47:46.067Z",
+	"_postman_exported_using": "Postman/11.62.6"
+}
